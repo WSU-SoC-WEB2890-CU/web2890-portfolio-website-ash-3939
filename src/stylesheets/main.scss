@@ -1,3 +1,50 @@
+// Font settings
+@font-face {
+  font-family: "FPDancerSerif";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Book.otf);
+}
+@font-face {
+  font-family: "FPDancerSerif";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Bold.otf);
+}
+@font-face {
+  font-family: "Apertura";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Apertura/Apertura-Regular.otf);
+}
+@font-face {
+  font-family: "Apertura";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/Apertura/Apertura-Bold.otf);
+}
+
+$headings-font-family: "Apertura", "Helvetica", sans-serif;
+$headings-font-weight: 700;
+$body-font-family: "FPDancerSerif", "Georgia", serif;
+
+// Imports
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+//color palette
+$custom-colors: (
+  "primary": #003049,
+  "secondary": #f28d8d,
+  "success": #35894e,
+  "info": #2a2c4c,
+  "warning": #b37816,
+  "danger": #f44336,
+  "light": #fbf9f9,
+  "dark": #2a2c4c,
+);
+
+// Merge custom colors with Bootstrap theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors);
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
