@@ -1,49 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio-Ashley Medell(Silva)</title>
+    <link rel="icon" type="image/x-icon" href="./images/protfolio-logo-tabico.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Portfolio website of Ashley Medell (Silva), showcasing projects, skills, and contact information."
+    />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
+
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="./images/protfolio-logo.png"
+              alt="a blonde girl with headphoes with the name Ashley Silva and text under it saying frontend magic, no wand required"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
-    
-</body>
+    <section class="hero">
+      <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Discover my projects and skills.</p>
+      </div>
+    </section>
+    <section>
+      <p></p>
+    </section>
+    <section></section>
+    <section></section>
+    <footer class="footer bg-primary text-light mt-auto">
+      <div class="container">
+        <div class="row text-center text-md-left align-items-center">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-3 col-4 mb-2">
+            <p class="footer-logo">
+              <img src="./images/protfolio-logo-footer.png" alt="girl with blonde hair and headphones" /> | AS
+            </p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-3 col-md-3 col-6 mb-lg-4 mb-md-4 contactrow">
+            <h6 class="footer-heading">Phone</h6>
+            <p><a class="footer-link" href="tel:+18018955668">(801)-895-5668</a></p>
+
+            <!-- Third Column as a row on mobile -->
+            <div class="d-md-none">
+              <h6 class="footer-heading">Email</h6>
+              <p><a class="footer-link" href="mailto:ashmedell@gmail.com">ashmedell@gmail.com</a></p>
+            </div>
+
+            <!-- Fourth Column as a row on mobile -->
+            <div class="d-md-none">
+              <h6 class="footer-heading">Social</h6>
+              <p>
+                <a href="https://www.facebook.com/ashley.medell.1/" class="text-light me-1"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="www.linkedin.com/in/ashley-medell-365b3b192" class="text-light"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-3 col-md-3 col-3 mb-4 d-none d-md-block">
+            <h6 class="footer-heading">Email</h6>
+            <p><a class="footer-link" href="mailto:ashmedell@gmail.com">ashmedell@gmail.com</a></p>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-3 col-md-3 col-3 mb-4 d-none d-md-block text-center">
+            <h6 class="footer-heading">Social</h6>
+            <p>
+              <a href="https://www.facebook.com/ashley.medell.1/" class="text-light me-1"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="www.linkedin.com/in/ashley-medell-365b3b192" class="text-light"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3 text-center copyright">
+        <p>&copy; 2025 Ashley Silva. All rights reserved.</p>
+      </div>
+    </footer>
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>

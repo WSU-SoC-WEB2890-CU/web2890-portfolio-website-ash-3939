@@ -1,46 +1,57 @@
+//Abstracts
+@import "abstract/_variables";
+
 // Font settings
 @font-face {
   font-family: "FPDancerSerif";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Book.otf);
+  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Book.otf) format("opentype");
 }
 @font-face {
   font-family: "FPDancerSerif";
   font-style: bold;
   font-weight: 700;
-  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Bold.otf);
+  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: "Apertura";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Apertura/Apertura-Regular.otf);
+  src: url(../fonts/Apertura/Apertura-Regular.otf) format("opentype");
 }
 @font-face {
   font-family: "Apertura";
   font-style: bold;
   font-weight: 700;
-  src: url(../fonts/Apertura/Apertura-Bold.otf);
+  src: url(../fonts/Apertura/Apertura-Bold.otf) format("opentype");
 }
 
 $headings-font-family: "Apertura", "Helvetica", sans-serif;
+$font-family-sans-serif: "Apertura", "Helvetica", sans-serif;
 $headings-font-weight: 700;
 $body-font-family: "FPDancerSerif", "Georgia", serif;
-
+$btn-font-family: $font-family-sans-serif;
 // Imports
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+
 //color palette
 $custom-colors: (
-  "primary": #003049,
-  "secondary": #f28d8d,
-  "success": #35894e,
-  "info": #2a2c4c,
-  "warning": #b37816,
-  "danger": #f44336,
-  "light": #fbf9f9,
-  "dark": #2a2c4c,
+  "primary": $primary,
+  //Prussian blue
+  "secondary": $secondary,
+  //Mauvelous
+  "success": $success,
+  //
+  "info": $info,
+  //Martinique
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  //Hint of Red
+  "dark": $dark,
+  //Martinique
 );
 
 // Merge custom colors with Bootstrap theme colors
@@ -48,3 +59,464 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+//global styles
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: $body-font-family;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography styles */
+/* Headings styles */
+/* H1 styles */
+/* H2 styles */
+/* H3 styles */
+/* H4 styles */
+/* Paragraph styles */
+
+/* Navbar styles */
+nav {
+  background-color: $light;
+  box-shadow: -7px 0 25px 0 $manatee;
+}
+.navbar-brand {
+  background-color: $light;
+  img {
+    height: 85px;
+    width: 85px;
+  }
+}
+
+.nav-item {
+  text-align: center;
+  font-size: 18px;
+}
+.nav-link {
+  display: inline-block;
+  position: relative; /* Position relative to allow absolute positioning of the underline */
+  color: $primary;
+}
+.nav-link.active {
+  color: $mauvelous !important;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* Position it just below the text */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Thickness of the underline */
+  background-color: $mauvelous; /* Color of the underline */
+  border-radius: 10px; /* Rounded ends */
+}
+
+/* Homepage Top Banner styles */
+.hero1 {
+  position: relative;
+  height: 492px;
+  box-shadow: 0px 15px 20px 0px $manatee;
+
+  img {
+    height: 492px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: $dark;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: $secondary;
+    color: white;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: white;
+      background-color: $mauvelous-50;
+    }
+  }
+}
+/* otherPages Top Banner styles */
+/* smaller Banners  */
+
+/* Footer styles */
+.footer {
+  position: relative;
+  background-color: #022c43; /* Dark navy background */
+  color: #ffffff; /* White text */
+  padding: 15px 0; /* Top and bottom padding */
+  height: 250px;
+  .footer-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .footer-logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: $font-family-sans-serif;
+    img {
+      height: 39px;
+      width: 39px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px; /* Remove extra margins */
+    .footer-link {
+      color: $light;
+      text-decoration: none;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  a {
+    i {
+      font-size: 18px;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .row > div {
+    text-align: left; /* Align text to left on larger screens */
+  }
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Space above */
+  padding-top: 15px; /* Padding above */
+  font-size: 14px; /* Smaller text size */
+}
+
+.contactrow {
+  margin-left: 45px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.copyright {
+  font-family: $body-font-family;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+/*Media Queries*/
+/* Media Queries for different screen sizes */
+/* Mobile styles */
+@include media-breakpoint-up(sm) {
+  /* Typography styles */
+  /* Headings styles */
+  /* H1 styles */
+  /* H2 styles */
+  /* H3 styles */
+  /* H4 styles */
+  /* Paragraph styles */
+
+  /* Navbar styles */
+
+  .navbar-brand {
+    background-color: $light;
+    img {
+      height: 85px;
+      width: 85px;
+    }
+  }
+
+  .nav-item {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Homepage Top Banner styles */
+  .hero1 {
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  /* otherPages Top Banner styles */
+  /* smaller Banners  */
+
+  /* Footer styles */
+  .footer {
+    position: relative;
+    background-color: #022c43; /* Dark navy background */
+    color: #ffffff; /* White text */
+    padding: 30px 0; /* Top and bottom padding */
+    height: 169px;
+
+    .footer-heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: bold;
+      img {
+        height: 31px;
+        width: 31px;
+      }
+    }
+    p {
+      margin: 0; /* Remove extra margins */
+      .footer-link {
+        color: $light;
+        text-decoration: none;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    a {
+      i {
+        font-size: 20px;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+    .row > div {
+      text-align: left; /* Align text to left on larger screens */
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 20px; /* Space above */
+    padding-top: 15px; /* Padding above */
+    font-size: 14px; /* Smaller text size */
+  }
+  .contactrow {
+    margin-left: 45px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .copyright {
+    font-family: $body-font-family;
+  }
+}
+/* Tablet styles */
+@include media-breakpoint-up(md) {
+  /* Homepage Top Banner styles */
+  .hero1 {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $dark;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+  }
+
+  /* Footer styles */
+  .footer .footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    img {
+      height: 31px;
+      width: 31px;
+    }
+  }
+  .contactrow {
+    margin-left: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+/* Desktop styles */
+@include media-breakpoint-up(lg) {
+  /* Typography styles */
+  /* Headings styles */
+  /* H1 styles */
+  /* H2 styles */
+  /* H3 styles */
+  /* H4 styles */
+  /* Paragraph styles */
+
+  /* Navbar styles */
+  nav {
+    background-color: $light;
+    height: 107px;
+
+    display: flex;
+    .container-fluid {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  .navbar-brand {
+    background-color: $light;
+    img {
+      height: 89px;
+      width: 89px;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
+      font-size: 23px;
+      margin: 10px;
+      .nav-link {
+        color: $dark;
+        text-decoration: none;
+        padding: 0;
+        &:hover {
+          color: $p-blue-100;
+        }
+      }
+    }
+  }
+
+  /* Homepage Top Banner styles */
+  .hero1 {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $dark;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+  }
+
+  /* otherPages Top Banner styles */
+  /* smaller Banners styles */
+
+  /* Footer styles */
+  .footer {
+    position: relative;
+    background-color: #022c43; /* Dark navy background */
+    color: #ffffff; /* White text */
+    padding: 30px 0; /* Top and bottom padding */
+    height: 159px;
+    .footer-heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .footer-logo {
+      font-size: 32px;
+      font-weight: bold;
+      img {
+        height: 51px;
+        width: 51px;
+      }
+    }
+
+    p {
+      margin: 0;
+      /* Remove extra margins */
+      .footer-link {
+        color: $light;
+        text-decoration: none;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    a {
+      i {
+        font-size: 21px;
+        margin-right: 5px;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .row > div {
+      text-align: left; /* Align text to left on larger screens */
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+    margin-top: 20px; /* Space above */
+    padding-top: 15px; /* Padding above */
+    font-size: 14px; /* Smaller text size */
+  }
+  .contactrow {
+    margin-left: 0;
+  }
+
+  .copyright {
+    font-family: $body-font-family;
+  }
+}

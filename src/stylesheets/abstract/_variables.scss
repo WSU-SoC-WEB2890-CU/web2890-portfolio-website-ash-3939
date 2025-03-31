@@ -1,0 +1,49 @@
+//color variations
+//Prussian blue
+$p-blue: #003049;
+$p-blue-50: #1e506b;
+$p-blue-100: #3c718d;
+$p-blue-200: #5a91af;
+$p-blue-300: #78b2d1;
+
+//Mauvelous
+$mauvelous: #f28d8d;
+$mauvelous-50: #f6b3b3;
+$mauvelous-100: #f9c7c7;
+$mauvelous-200: #fbdada;
+$mauvelous-300: #fdeded;
+
+//Manatee
+$manatee: #8086a8;
+$manatee-50: #a8acc0;
+$manatee-100: #bbbecd;
+$manatee-200: #cfd1d9;
+$manatee-300: #e3e4e5;
+
+//Martinique
+$martinique: #2a2c4c;
+$martinique-50: #363860;
+$martinique-100: #4d5189;
+$martinique-200: #595e9d;
+$martinique-300: #656ab1;
+
+//Hint of Red
+$hint-of-red: #fbf9f9;
+
+//colors
+$color: (
+  "p-blue": $p-blue,
+  "mauvelous": $mauvelous,
+  "martinique": $martinique,
+  "manatee": $manatee,
+  "hint-of-red": $hint-of-red,
+);
+
+$primary: $p-blue;
+$secondary: $mauvelous;
+$success: #35894e;
+$info: $martinique;
+$warning: #b37816;
+$danger: #f44336;
+$light: $hint-of-red;
+$dark: $martinique;
