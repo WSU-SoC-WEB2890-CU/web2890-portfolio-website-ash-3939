@@ -59,6 +59,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 //global styles
 
@@ -395,6 +396,9 @@ nav {
   /* H3 styles */
   /* H4 styles */
   /* Paragraph styles */
+  .home-paragraph{
+    margin-top: 10px;
+  }
 
   /* Navbar styles */
   nav {
