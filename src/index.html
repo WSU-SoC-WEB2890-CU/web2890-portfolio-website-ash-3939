@@ -60,28 +60,34 @@
         <div class="row">
           <div class="col-12"><h1>Ashley Silva</h1></div>
           <div class="col-12"><p>Front-end Software Engineer</p></div>
-          <div class="col-12"><button class="btn" onclick="location.href='portfolio.html'">View Portfolio</button></div>
+          <div class="col-12"><button class="btn" onclick="location.href='portfolio.html'">Read About Me</button></div>
         </div>
       </div>
     </section>
+    <main></main>
     <!-- Skills Section -->
-    <section class="skills-section mt-5 text-center">
+    <section class="skills-section text-center">
       <p>
         With these tools, I turn complex code into seamless experiences—where great design meets precision and a touch
         of magic.
       </p>
       <div class="container">
-        <div class="row">
+        <div class="row mt-5 mb-2">
           <!-- Card 1 -->
           <div class="col-md-4">
             <div class="card p-3">
               <img src="./images/code-types.png" class="card-img-top" alt="Front-end Stack" />
               <div class="card-body">
-                <h3 class="card-title">Front-end Stack</h3>
+                <h4 class="card-title">Front Stack</h4>
+                <hr />
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-brands fa-html5" style="color: #f28d8d"></i>HTML</li>
-                  <li class="list-group-item">Sass(CSS)</li>
-                  <li class="list-group-item">JavaScript</li>
+                  <li class="list-group-item"><i class="fa-brands fa-html5 me-2" style="color: #f28d8d"></i> HTML</li>
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-sass me-2" style="color: #f28d8d"></i> Sass(CSS)
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-js me-2" style="color: #f28d8d"></i> JavaScript
+                  </li>
                 </ul>
               </div>
             </div>
@@ -92,11 +98,16 @@
             <div class="card p-3">
               <img src="./images/design-types.png" class="card-img-top" alt="Design Tools" />
               <div class="card-body">
-                <h3 class="card-title">Design Tools</h3>
+                <h4 class="card-title">Design Tools</h4>
+                <hr />
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Adobe Creative Suite</li>
-                  <li class="list-group-item">Figma</li>
-                  <li class="list-group-item">Google Fonts</li>
+                  <li class="list-group-item">
+                    <img src="./images/icons8-adobe-50.svg" alt="It is an adobe icon" /> Adobe Suite
+                  </li>
+                  <li class="list-group-item"><i class="fa-brands fa-figma me-2" style="color: #f28d8d"></i>Figma</li>
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-google me-2" style="color: #f28d8d"></i>Google Fonts
+                  </li>
                 </ul>
               </div>
             </div>
@@ -107,11 +118,12 @@
             <div class="card p-3">
               <img src="./images/IDES-types.png" class="card-img-top" alt="IDEs" />
               <div class="card-body">
-                <h3 class="card-title">IDEs</h3>
+                <h4 class="card-title rounded">IDEs</h4>
+                <hr />
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><i class="fa-solid fa-atom" style="color: #f28d8d"></i>Atom</li>
-                  <li class="list-group-item">PyCharm</li>
-                  <li class="list-group-item">VSCode</li>
+                  <li class="list-group-item"><i class="fa-solid fa-atom me-2" style="color: #f28d8d"></i>Atom</li>
+                  <li class="list-group-item"><img src="./images/pycharm.svg" alt="pycharm logo" /> PyCharm</li>
+                  <li class="list-group-item"><img src="./images/file-type-vscode.svg" alt="vscode logo" />VSCode</li>
                 </ul>
               </div>
             </div>
@@ -119,8 +131,64 @@
         </div>
       </div>
     </section>
-    <section></section>
-    <section></section>
+    <!--portfolio section-->
+    <section class="hero2">
+      <img
+        src="./images/home-page/home-page-portfolio-banner.jpg"
+        class="card-img"
+        alt="notebook with wire frames doodled in it"
+      />
+      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12 mb-3"><h2>Explore my recent work below or visit my portfolio for more projects.</h2></div>
+          <div class="col-12"><button class="btn" onclick="location.href='portfolio.html'">View Portfolio</button></div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-section">
+      <div class="container">
+        <div class="row mt-5 mb-2">
+          <!-- Card 1 -->
+          <div class="col-md-6">
+            <div class="card">
+              <img src="./images/apartment-image.jpg" class="card-img-top" alt="Front-end Stack" />
+              <div class="card-body">
+                <h4 class="card-title text-center">Skyline Residences Prototype</h4>
+                <hr />
+                <p class="text-left">
+                  I am creating an apartment prototype website for a fictious company called Skyline Residences. This
+                  website shows different apartments in the apartment building for rent, and much more.
+                </p>
+              </div>
+              <div class="card-body text-center">
+                <a href="#" class="card-link btn btn-primary">Project Details</a>
+                <a href="#" class="card-link btn btn-secondary text-light">View Prototype</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6">
+            <div class="card">
+              <img src="./images/cardeal.jpg" class="card-img-top" alt="Design Tools" />
+              <div class="card-body">
+                <h4 class="card-title text-center">Cardeal Prototype</h4>
+                <hr />
+                <p class="text-left">
+                  I am created an car buying prototype website for a fictious company called Cardeal. This website
+                  allows people to sell their car for a different car. I used blue and green color pallet to be eye
+                  catching for everyone.
+                </p>
+              </div>
+              <div class="card-body text-center">
+                <a href="#" class="card-link btn btn-primary">Project Details</a>
+                <a href="#" class="card-link btn btn-secondary text-light">View Prototype</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer bg-primary text-light mt-auto">
       <div class="container">
         <div class="row text-center text-md-left align-items-center">

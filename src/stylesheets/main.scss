@@ -77,12 +77,24 @@ body {
   flex-direction: column;
 }
 
+hr {
+  border-top: 3px solid $primary !important;
+  border-radius: 6px;
+  color: inherit; /* Ensure it doesn't conflict with the border color */
+}
+
+.btn-primary:hover {
+  background-color: $p-blue-50;
+}
 /* Typography styles */
 /* Headings styles */
 /* H1 styles */
 /* H2 styles */
 /* H3 styles */
 /* H4 styles */
+h4 {
+  color: $primary !important;
+}
 /* Paragraph styles */
 
 /* Navbar styles */
@@ -167,6 +179,84 @@ nav {
 }
 /* otherPages Top Banner styles */
 /* smaller Banners  */
+.hero2 {
+  position: relative;
+  height: 492px;
+  box-shadow: 0px 15px 20px 0px $manatee;
+  margin-bottom: 5rem;
+
+  img {
+    height: 195px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: $secondary;
+    color: white;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: white;
+      background-color: $mauvelous-50;
+    }
+  }
+  .row {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+/*cards styles*/
+.skills-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  li img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .card {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.portfolio-section {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  li img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .card {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
 
 /* Footer styles */
 .footer {
@@ -266,13 +356,11 @@ nav {
   .hero1 {
     h1 {
       font-size: 2rem;
-      font-weight: bold;
       margin-bottom: 10px;
     }
 
     p {
       font-size: 1rem;
-      font-weight: bold;
       margin-bottom: 30px;
     }
 
@@ -283,18 +371,61 @@ nav {
   }
   /* otherPages Top Banner styles */
   /* smaller Banners  */
+  .hero2 {
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+    .row {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+
+  /*cards styles*/
+  .skills-section {
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  .portfolio-section {
+    p {
+      font-size: 20px;
+      font-weight: normal;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
 
   /* Footer styles */
   .footer {
-    position: relative;
-    background-color: #022c43; /* Dark navy background */
-    color: #ffffff; /* White text */
     padding: 30px 0; /* Top and bottom padding */
-    height: 169px;
-
+    height: 250px;
     .footer-heading {
-      font-weight: bold;
-      text-transform: uppercase;
       margin-bottom: 10px;
       margin-top: 5px;
       font-size: 14px;
@@ -371,7 +502,47 @@ nav {
     }
   }
 
+  /*cards styles*/
+  .skills-section {
+    p {
+      font-size: 20px;
+    }
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    .card {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .portfolio-section {
+    p {
+      font-size: 20px;
+      font-weight: normal;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
   /* Footer styles */
+
   .footer .footer-logo {
     font-size: 22px;
     font-weight: bold;
@@ -396,7 +567,7 @@ nav {
   /* H3 styles */
   /* H4 styles */
   /* Paragraph styles */
-  .home-paragraph{
+  .home-paragraph {
     margin-top: 10px;
   }
 
@@ -460,6 +631,37 @@ nav {
 
   /* otherPages Top Banner styles */
   /* smaller Banners styles */
+
+  /*cards styles*/
+  .skills-section {
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+  }
+
+  .portfolio-section {
+    p {
+      font-size: 20px;
+      font-weight: normal;
+    }
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+  }
 
   /* Footer styles */
   .footer {
