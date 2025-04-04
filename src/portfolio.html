@@ -15,25 +15,27 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img
+          <a class="navbar-brand" href="index.html">
+            <img
               src="./images/protfolio-logo.png"
-              alt="a blonde girl with headphoes with the name Ashley Silva and text under it saying frontend magic, no wand required"
-          /></a>
+              alt="a blonde girl with headphones with the name Ashley Silva and text under it saying frontend magic, no wand required"
+              class="navbar-logo"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
@@ -41,8 +43,26 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="portfolio.html">Portfolio</a>
+              <li class="nav-item dropdown active">
+                <a
+                  class="nav-link dropdown-toggle"
+                  aria-current="page"
+                  href="portfolio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="portfolioDropdown"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cardeal.html">Cardeal</a></li>
+                  <li><a class="dropdown-item" href="skyline-apartments.html">Skyline Residences Apartments</a></li>
+                  <li><a class="dropdown-item" href="shop-til-you-drop.html">Shop Til' You Drop</a></li>
+                  <li><a class="dropdown-item" href="notes-app.html">Notes App</a></li>
+                  <li><a class="dropdown-item" href="wildcat-store.html">Wildcat Store</a></li>
+                  <li><a class="dropdown-item" href="recipe-meal-prep.html">Recipe & Meal Prep Website</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -52,10 +72,12 @@
         </div>
       </nav>
     </header>
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my projects and skills.</p>
+    <section class="hero3">
+      <img src="./images/portfolio-banner.jpg" class="card-img" alt="computer desk with plants and camera" />
+      <div class="card-img-overlay text-center d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12"><h1>Portfolio</h1></div>
+        </div>
       </div>
     </section>
     <section>

@@ -32,6 +32,9 @@ $font-family-sans-serif: "Apertura", "Helvetica", sans-serif;
 $headings-font-weight: 700;
 $body-font-family: "FPDancerSerif", "Georgia", serif;
 $btn-font-family: $font-family-sans-serif;
+
+$timeline-width: 4px;
+$dot-size: 20px;
 // Imports
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
@@ -78,13 +81,30 @@ body {
 }
 
 hr {
-  border-top: 3px solid $primary !important;
+  border-top: 4px solid $primary !important;
   border-radius: 6px;
-  color: inherit; /* Ensure it doesn't conflict with the border color */
+  opacity: 100%;
+  color: $primary !important;
+  width: 50%;
+  margin: auto;
+  margin-top: 5px;
 }
 
 .btn-primary:hover {
   background-color: $p-blue-50;
+}
+
+button,
+.btn {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+}
+.container {
+  padding: 0 48px;
+  margin-bottom: 50px;
 }
 /* Typography styles */
 /* Headings styles */
@@ -144,7 +164,6 @@ nav {
     object-fit: cover;
     width: 100%;
   }
-
   .card-img-overlay {
     background-color: rgba(255, 255, 255, 0.65);
   }
@@ -215,6 +234,34 @@ nav {
   }
 }
 
+.hero3 {
+  position: relative;
+  height: 392px;
+  box-shadow: 0px 15px 20px 0px $manatee;
+
+  img {
+    height: 392px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: $dark;
+  }
+}
+
 /*cards styles*/
 .skills-section {
   margin-top: 5rem;
@@ -258,6 +305,74 @@ nav {
   }
 }
 
+.hobbies-section {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  li img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .card {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+/*section styles*/
+.summary-section {
+  margin-top: 5rem;
+  padding: 0 34px;
+  .row {
+    flex-direction: column-reverse;
+  }
+  img {
+    display: block;
+    margin: auto;
+    border-radius: 6px;
+    height: 470px;
+    box-shadow: -7px 7px 25px -1px $manatee;
+    margin-bottom: 3rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    line-height: 150%;
+    color: $dark;
+  }
+}
+
+/*time-line styles*/
+.timeline-with-icons {
+  border-left: 3px solid $p-blue;
+  position: relative;
+  list-style: none;
+}
+
+.timeline-with-icons .timeline-item {
+  position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline-with-icons .timeline-icon {
+  position: absolute;
+  left: -48px;
+  background-color: $p-blue;
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* Footer styles */
 .footer {
   position: relative;
@@ -329,13 +444,11 @@ nav {
 /* Media Queries for different screen sizes */
 /* Mobile styles */
 @include media-breakpoint-up(sm) {
+  .container {
+    padding: 0 48px;
+    margin-bottom: 50px;
+  }
   /* Typography styles */
-  /* Headings styles */
-  /* H1 styles */
-  /* H2 styles */
-  /* H3 styles */
-  /* H4 styles */
-  /* Paragraph styles */
 
   /* Navbar styles */
 
@@ -370,6 +483,22 @@ nav {
     }
   }
   /* otherPages Top Banner styles */
+  .hero3 {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
   /* smaller Banners  */
   .hero2 {
     h2 {
@@ -418,6 +547,42 @@ nav {
     }
     h4 {
       font-size: 30px;
+    }
+  }
+
+  .hobbies-section {
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  /*section styles*/
+  .summary-section {
+    .row {
+      flex-direction: column-reverse;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      border-radius: 6px;
+      height: 470px;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 1rem;
     }
   }
 
@@ -480,8 +645,32 @@ nav {
 }
 /* Tablet styles */
 @include media-breakpoint-up(md) {
+  .container1 {
+    padding: 0 42px;
+  }
   /* Homepage Top Banner styles */
   .hero1 {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $dark;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+  }
+
+  .hero3 {
     h1 {
       font-size: 3rem;
       font-weight: bold;
@@ -526,19 +715,69 @@ nav {
 
   .portfolio-section {
     p {
-      font-size: 20px;
-      font-weight: normal;
-      margin: 0 3rem;
-    }
-    .list-group-item {
       font-size: 18px;
+      font-weight: normal;
+      margin-left: 15px;
+      margin-right: 15px;
     }
     .card {
       margin-bottom: 2rem;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 625px;
     }
     h4 {
       font-size: 30px;
     }
+  }
+
+  .hobbies-section {
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    .card {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  /*section styles*/
+  .summary-section {
+    padding: 0 42px;
+    .row {
+      flex-direction: row;
+    }
+    img {
+      display: block;
+      margin: auto;
+      height: 316px;
+      width: 316px;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 150%;
+      font-size: 16px;
+      padding-top: 25px;
+    }
+  }
+
+  /*time-line styles*/
+  .timeline-with-icons .timeline-item {
+    margin-bottom: 50px; // Adjust spacing for md
+  }
+
+  .timeline-with-icons .timeline-icon {
+    left: -48px; // Adjust icon positioning for md
   }
 
   /* Footer styles */
@@ -560,13 +799,10 @@ nav {
 }
 /* Desktop styles */
 @include media-breakpoint-up(lg) {
+  .container1 {
+    padding: 0 52px;
+  }
   /* Typography styles */
-  /* Headings styles */
-  /* H1 styles */
-  /* H2 styles */
-  /* H3 styles */
-  /* H4 styles */
-  /* Paragraph styles */
   .home-paragraph {
     margin-top: 10px;
   }
@@ -653,6 +889,12 @@ nav {
       font-size: 20px;
       font-weight: normal;
     }
+    .card {
+      height: 47rem;
+    }
+  }
+
+  .hobbies-section {
     li img {
       height: 15px;
       width: 15px;
@@ -661,8 +903,26 @@ nav {
     .list-group-item {
       font-size: 18px;
     }
-    .card{
-      height: 47rem;
+  }
+
+  /*section styles*/
+  .summary-section {
+    padding: 0 52px;
+    .row {
+      flex-direction: row;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      height: 366px;
+      width: 366px !important;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 18px;
     }
   }
 

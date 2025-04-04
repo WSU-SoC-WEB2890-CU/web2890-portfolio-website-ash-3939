@@ -15,25 +15,27 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"
-            ><img
+          <a class="navbar-brand" href="index.html">
+            <img
               src="./images/protfolio-logo.png"
-              alt="a blonde girl with headphoes with the name Ashley Silva and text under it saying frontend magic, no wand required"
-          /></a>
+              alt="a blonde girl with headphones with the name Ashley Silva and text under it saying frontend magic, no wand required"
+              class="navbar-logo"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
@@ -41,8 +43,25 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="about.html">About</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portfolio.html">Portfolio</a>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="portfolio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="portfolioDropdown"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cardeal.html">Cardeal</a></li>
+                  <li><a class="dropdown-item" href="skyline-apartments.html">Skyline Residences Apartments</a></li>
+                  <li><a class="dropdown-item" href="shop-til-you-drop.html">Shop Til' You Drop</a></li>
+                  <li><a class="dropdown-item" href="notes-app.html">Notes App</a></li>
+                  <li><a class="dropdown-item" href="wildcat-store.html">Wildcat Store</a></li>
+                  <li><a class="dropdown-item" href="recipe-meal-prep.html">Recipe & Meal Prep Website</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -52,17 +71,302 @@
         </div>
       </nav>
     </header>
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Discover my projects and skills.</p>
+    <!-- summary Section -->
+    <section class="hero3">
+      <img src="./images/about-me/about-me-banner.jpg" class="card-img" alt="green with pink tips succulents" />
+      <div class="card-img-overlay text-center d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12"><h1>About Me</h1></div>
+          <div class="col-12"><p>Hello my name is Ashley Silva</p></div>
+        </div>
       </div>
     </section>
-    <section>
-      <p></p>
+    <div class="mb-5 summary-section">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-lg-7 col-sm-12 col-md-7 mb-4">
+          <p class="card1">
+            I love technology and coding, with a special passion for frontend development. Bringing designs to life and
+            creating seamless, user-friendly experiences is what drives me. I am a huge nerd for anything Star Wars and
+            enjoy exploring how futuristic concepts inspire tech innovations.
+          </p>
+          <p class="card1">
+            In my free time, I love playing video games, which often spark my creativity for problem-solving. Music and
+            singing bring me joy and serve as a way to express my emotions. Combining my love for technology and
+            creative outlets like music keeps me motivated to pursue new challenges and create meaningful digital
+            experiences.
+          </p>
+        </div>
+        <div class="col-lg-5 col-sm-12 col-md-5 justify-content-center">
+          <img class="img-fluid" src="./images/about-me/about-me-imagejpg.jpg" alt="a picture of me" />
+        </div>
+      </div>
+    </div>
+    <!-- hobbies and interests -->
+    <section class="hero2">
+      <img src="./images/about-me/about-me-personal.jpg" class="card-img" alt="pink yarn with crochet hook" />
+      <div class="card-img-overlay d-flex justify-content-left align-items-center">
+        <div class="row">
+          <div class="col-12 mb-3"><h2>Personal Life</h2></div>
+        </div>
+      </div>
     </section>
-    <section></section>
-    <section></section>
+    <section class="hobbies-section">
+      <div class="container1">
+        <div class="row mt-2 mb-2">
+          <!-- Card 1 -->
+          <div class="col-md-4 offset-md-4">
+            <div class="card">
+              <img src="./images/about-me/about-me-hobbies.jpg" class="card-img-top" alt="Front-end Stack" />
+              <div class="card-body">
+                <h4 class="card-title text-center">
+                  Hobbies
+                  <hr />
+                </h4>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <img src="./images/yarn.svg" alt="It is an adobe icon" style="width: 25px; height: 25px" />
+                    Crocheting
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-dice-d20 me-2" style="color: #f28d8d"></i> Playing D&D with friends
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-gamepad me-2" style="color: #f28d8d"></i> Video Gaming
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-seedling me-2" style="color: #f28d8d"></i> Gardening(Succulents mostly)
+                  </li>
+                  <li class="list-group-item"><i class="fa-solid fa-music me-2" style="color: #f28d8d"></i> Singing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--school and work-->
+    <section class="hero2">
+      <img
+        src="./images/about-me/about-me-school-work.jpg"
+        class="card-img"
+        alt="school books and a phone stacked on top of each other"
+      />
+      <div class="card-img-overlay d-flex justify-content-left align-items-center">
+        <div class="row">
+          <div class="col-12 mb-3"><h2>Education and Employment</h2></div>
+          <div class="col-12">
+            <button type="submit" class="btn" onclick="window.open('./images/Resume.pdf')">Download My Resume</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Education -->
+    <section class="container">
+      <h3 class="mb-4">Education</h3>
+      <ul class="timeline-with-icons">
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-school text-light fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">In Progress</p>
+          <p class="fw-bold text-dark mb-1">B.S. Computer Science with Minor in Web Dev</p>
+          <p class="text-muted mb-1 fw-bold">Weber Sate University</p>
+          <p class="text-dark">I am currently studying computer science with more focus on web development</p>
+        </li>
+
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-graduation-cap text-light text-primary fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">April 2023</p>
+          <p class="fw-bold text-dark mb-1">A.A.S. Computer Science- Graduated with honors (3.8 gpa)</p>
+          <p class="text-muted mb-1 fw-bold">Weber Sate University</p>
+          <p class="text-dark">
+            This helped me find what I really wanted to study because of the the different coding classes.
+          </p>
+        </li>
+
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-graduation-cap text-light fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">December 2022</p>
+          <p class="fw-bold text-dark mb-1">Certificate of Programming Fundamentals</p>
+          <p class="text-muted mb-1 fw-bold">Weber Sate University</p>
+        </li>
+
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-graduation-cap text-light fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">August 2021</p>
+          <p class="fw-bold text-dark mb-1">A.S. General Studies</p>
+          <p class="text-muted mb-1 fw-bold">Weber Sate University</p>
+          <p class="text-dark">This degree helped me discover Computer Science.</p>
+        </li>
+      </ul>
+    </section>
+    <!-- Section: Employment -->
+    <section class="container mt-4">
+      <h3 class="mb-4">Employment</h3>
+      <ul class="timeline-with-icons">
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-computer text-light fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">January 2019 - Present</p>
+          <p class="fw-bold text-dark mb-1">eCommerce Programmer</p>
+          <p class="text-muted mb-1 fw-bold">Wildcat Store, Ogden UT</p>
+          <p class="text-dark">
+            This role involves enhancing website functionality, streamlining interfaces, and delivering seamless
+            navigation for customers.
+          </p>
+        </li>
+
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-book text-light text-primary fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">July 2019 - January 2019</p>
+          <p class="fw-bold text-dark mb-1">Course Materials Associate</p>
+          <p class="text-muted mb-1 fw-bold">Wildcat Store, Ogden UT</p>
+          <p class="text-dark">Helped students find textbooks and organized textbooks.</p>
+        </li>
+
+        <li class="timeline-item mb-5">
+          <span class="timeline-icon">
+            <i class="fa-solid fa-handshake-angle text-light fa-sm fa-fw"></i>
+          </span>
+          <p class="text-muted mb-2">June 2019 - July 2019</p>
+          <p class="fw-bold text-dark mb-1">Customer Service Team Member</p>
+          <p class="text-muted mb-1 fw-bold">Wildcat Store, Ogden UT</p>
+          <p class="text-dark">
+            Assisted customers at the register, addressed inquiries, and efficiently restocked shelves to maintain a
+            well-organized store.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- skills -->
+    <section class="hero2">
+      <img
+        src="./images/about-me/about-me-skills.jpg"
+        class="card-img"
+        alt="school books and a phone stacked on top of each other"
+      />
+      <div class="card-img-overlay d-flex justify-content-left align-items-center">
+        <div class="row">
+          <div class="col-12 mb-3"><h2>Skills</h2></div>
+          <div class="col-12"></div>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section text-center m-0">
+      <div class="container1">
+        <div class="row mt-5 mb-2">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card p-3">
+              <img src="./images/code-types.png" class="card-img-top" alt="Front-end Stack" />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Relevant Skills
+                  <hr />
+                </h4>
+                <div class="row">
+                  <div class="col-6">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <i class="fa-brands fa-html5 me-2" style="color: #f28d8d"></i> HTML
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fa-brands fa-sass me-2" style="color: #f28d8d"></i> Sass(CSS)
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fa-brands fa-js me-2" style="color: #f28d8d"></i> JavaScript
+                      </li>
+                      <li class="list-group-item">
+                        <i class="fa-solid fa-database me-2" style="color: #f28d8d"></i> MySQL
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                        <i class="fa-brands fa-figma me-2" style="color: #f28d8d"></i>Figma
+                      </li>
+                      <li class="list-group-item">
+                        <img src="./images/icons8-adobe-50.svg" alt="It is an adobe icon" />Photoshop
+                      </li>
+                      <li class="list-group-item">
+                        <img src="./images/icons8-adobe-50.svg" alt="It is an adobe icon" />Illustrator
+                      </li>
+                      <li class="list-group-item">
+                        <img src="./images/icons8-adobe-50.svg" alt="It is an adobe icon" /> Adobe XD
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card p-3">
+              <img src="./images/classes.png" class="card-img-top" alt="Design Tools" />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Related Classes
+                  <hr />
+                </h4>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-css me-2" style="color: #f28d8d"></i> Advance CSS
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-users me-2" style="color: #f28d8d"></i> Client Side Frameworks
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-laptop-code me-2" style="color: #f28d8d"></i> Software Engineering I & II
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-code me-2" style="color: #f28d8d"></i> Foundations of Computing
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-database me-2" style="color: #f28d8d"></i> Data Structures and Algorithms
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-solid fa-users-between-lines me-2" style="color: #f28d8d"></i> User Experience Design
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card p-3">
+              <img src="./images/IDES-types.png" class="card-img-top" alt="IDEs" />
+              <div class="card-body">
+                <h4 class="card-title rounded">
+                  IDEs
+                  <hr />
+                </h4>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="fa-solid fa-atom me-2" style="color: #f28d8d"></i>Atom</li>
+                  <li class="list-group-item"><img src="./images/pycharm.svg" alt="pycharm logo" /> PyCharm</li>
+                  <li class="list-group-item"><img src="./images/file-type-vscode.svg" alt="vscode logo" />VSCode</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer class="footer bg-primary text-light mt-auto">
       <div class="container">
         <div class="row text-center text-md-left align-items-center">
