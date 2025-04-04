@@ -102,7 +102,7 @@ button,
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
   }
 }
-.container {
+.container2 {
   padding: 0 48px;
   margin-bottom: 50px;
 }
@@ -444,7 +444,7 @@ nav {
 /* Media Queries for different screen sizes */
 /* Mobile styles */
 @include media-breakpoint-up(sm) {
-  .container {
+  .container2 {
     padding: 0 48px;
     margin-bottom: 50px;
   }
