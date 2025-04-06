@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   })
 })
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.getElementById("downloadBtn")
+
+  button.addEventListener("click", function () {
+    const link = document.createElement("a")
+    link.href = "./images/Resume.pdf" // or any file type
+    link.download = "Resume.pdf" // optional
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  })
+})
 // document.addEventListener("DOMContentLoaded", function () {
 //   document.getElementById("contact-form").addEventListener("submit", function (e) {
 //     e.preventDefault()
