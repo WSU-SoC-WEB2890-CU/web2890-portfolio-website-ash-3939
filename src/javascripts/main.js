@@ -1,5 +1,6 @@
 //TODO - Your ES6 JavaScript code (if any) goes here
 import "bootstrap"
+import resume from "../assets/resume-ashley-medell.pdf"
 document.addEventListener("DOMContentLoaded", function () {
   const dropdownToggle = document.querySelector(".dropdown-toggle")
 
@@ -21,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   button.addEventListener("click", function () {
     const link = document.createElement("a")
-    link.href = "/resume-ashley-medell.pdf" // or any file type
-    link.download = "/resume-ashley-medell.pdf" // optional
+    link.href = resume // or any file type
+    link.download = "resume-ashley-medell.pdf" // optional
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
