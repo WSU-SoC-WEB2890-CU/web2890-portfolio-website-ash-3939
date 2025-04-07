@@ -1,3 +1,1029 @@
+//Abstracts
+@import "abstract/_variables";
+
+// Font settings
+@font-face {
+  font-family: "FPDancerSerif";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Book.otf) format("opentype");
+}
+@font-face {
+  font-family: "FPDancerSerif";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/FP-Dancer-Serif/FPDancerSerif-Bold.otf) format("opentype");
+}
+@font-face {
+  font-family: "Apertura";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Apertura/Apertura-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "Apertura";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../fonts/Apertura/Apertura-Bold.otf) format("opentype");
+}
+
+$headings-font-family: "Apertura", "Helvetica", sans-serif;
+$font-family-sans-serif: "Apertura", "Helvetica", sans-serif;
+$headings-font-weight: 700;
+$body-font-family: "FPDancerSerif", "Georgia", serif;
+$btn-font-family: $font-family-sans-serif;
+
+$timeline-width: 4px;
+$dot-size: 20px;
+// Imports
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+//color palette
+$custom-colors: (
+  "primary": $primary,
+  //Prussian blue
+  "secondary": $secondary,
+  //Mauvelous
+  "success": $success,
+  //
+  "info": $info,
+  //Martinique
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  //Hint of Red
+  "dark": $dark,
+  //Martinique
+);
+
+// Merge custom colors with Bootstrap theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors);
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+//global styles
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: $body-font-family;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+}
+
+hr {
+  border-top: 4px solid $primary !important;
+  border-radius: 6px;
+  opacity: 100%;
+  color: $primary !important;
+  width: 50%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.btn-primary:hover {
+  background-color: $p-blue-50;
+}
+
+button,
+.btn {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+  }
+}
+.container1 {
+  padding: 0 48px;
+  margin-bottom: 50px;
+  p {
+    line-height: 201%;
+    font-size: 16px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+}
+.bg-mauvelous-200 {
+  background-color: $mauvelous-200 !important;
+}
+/* Typography styles */
+/* Headings styles */
+/* H1 styles */
+/* H2 styles */
+/* H3 styles */
+/* H4 styles */
+h4 {
+  color: $primary !important;
+}
+/* Paragraph styles */
+.para-font {
+  font-size: 1.7rem !important;
+  line-height: 1.5;
+}
+
+/* Navbar styles */
+nav {
+  background-color: $light;
+  box-shadow: -7px 0 25px 0 $manatee;
+}
+.navbar-brand {
+  background-color: $light;
+  img {
+    height: 85px;
+    width: 85px;
+  }
+}
+
+.nav-item {
+  text-align: center;
+  font-size: 18px;
+}
+.nav-link {
+  display: inline-block;
+  position: relative; /* Position relative to allow absolute positioning of the underline */
+  color: $primary;
+}
+.nav-link.active {
+  color: $mauvelous !important;
+}
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* Position it just below the text */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Thickness of the underline */
+  background-color: $mauvelous; /* Color of the underline */
+  border-radius: 10px; /* Rounded ends */
+}
+
+/* Homepage Top Banner styles */
+.hero1 {
+  position: relative;
+  height: 492px;
+  box-shadow: 0px 15px 20px 0px $manatee;
+
+  img {
+    height: 492px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: $dark;
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: $secondary;
+    color: white;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: white;
+      background-color: $mauvelous-50;
+    }
+  }
+}
+/* otherPages Top Banner styles */
+/* smaller Banners  */
+.hero2 {
+  position: relative;
+  height: 492px;
+  box-shadow: 0px 15px 20px 0px $manatee;
+  margin-bottom: 5rem;
+
+  img {
+    height: 195px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: $secondary;
+    color: white;
+    transition: background-color 0.3s ease;
+    &:hover {
+      color: white;
+      background-color: $mauvelous-50;
+    }
+  }
+  .row {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.hero3 {
+  position: relative;
+  height: 392px;
+  box-shadow: 0px 15px 20px 0px $manatee;
+
+  img {
+    height: 392px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card-img-overlay {
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: $light;
+  }
+}
+
+/*cards styles*/
+.skills-section {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  li img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .card {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.portfolio-section {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  li img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .card {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+.hobbies-section {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  li img {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+  .list-group-item {
+    font-size: 16px;
+  }
+  .card {
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+/*section styles*/
+.summary-section {
+  margin-top: 5rem;
+  padding: 0 34px;
+  .row {
+    flex-direction: column-reverse;
+  }
+  img {
+    display: block;
+    margin: auto;
+    border-radius: 6px;
+    height: 470px;
+    box-shadow: -7px 7px 25px -1px $manatee;
+    margin-bottom: 3rem;
+  }
+  .sizing {
+    display: block;
+    margin: auto;
+    border-radius: 6px;
+    height: 470px;
+    box-shadow: -7px 7px 25px -1px $manatee;
+    margin-bottom: 3rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    line-height: 150%;
+    color: $dark;
+  }
+}
+
+/*time-line styles*/
+.timeline-with-icons {
+  border-left: 3px solid $p-blue;
+  position: relative;
+  list-style: none;
+}
+
+.timeline-with-icons .timeline-item {
+  position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline-with-icons .timeline-icon {
+  position: absolute;
+  left: -48px;
+  background-color: $p-blue;
+  border-radius: 50%;
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Footer styles */
+.footer {
+  position: relative;
+  background-color: #022c43; /* Dark navy background */
+  color: #ffffff; /* White text */
+  padding: 15px 0; /* Top and bottom padding */
+  height: 250px;
+  .footer-heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  .footer-logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    font-family: $font-family-sans-serif;
+    img {
+      height: 39px;
+      width: 39px;
+    }
+  }
+
+  p {
+    margin-bottom: 10px; /* Remove extra margins */
+    .footer-link {
+      color: $light;
+      text-decoration: none;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  a {
+    i {
+      font-size: 18px;
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+
+  .row > div {
+    text-align: left; /* Align text to left on larger screens */
+  }
+}
+
+.footer-bottom {
+  margin-top: 20px; /* Space above */
+  padding-top: 15px; /* Padding above */
+  font-size: 14px; /* Smaller text size */
+}
+
+.contactrow {
+  margin-left: 45px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+.copyright {
+  font-family: $body-font-family;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+}
+
+/*Media Queries*/
+/* Media Queries for different screen sizes */
+/* Mobile styles */
+@include media-breakpoint-up(sm) {
+  .container1 {
+    padding: 0 48px;
+    margin-bottom: 50px;
+  }
+  /* Typography styles */
+
+  /* Navbar styles */
+
+  .navbar-brand {
+    background-color: $light;
+    img {
+      height: 85px;
+      width: 85px;
+    }
+  }
+
+  .nav-item {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  /* Homepage Top Banner styles */
+  .hero1 {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  /* otherPages Top Banner styles */
+  .hero3 {
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
+  /* smaller Banners  */
+  .hero2 {
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+    .row {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+
+  /*cards styles*/
+  .skills-section {
+    p {
+      font-size: 20px;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  .portfolio-section {
+    p {
+      font-size: 20px;
+      font-weight: normal;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  .hobbies-section {
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 3rem;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+    .card {
+      margin-bottom: 2rem;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  /*section styles*/
+  .summary-section {
+    .row {
+      flex-direction: column-reverse;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      border-radius: 6px;
+      height: 470px;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    .sizing {
+      display: block;
+      margin: auto;
+      border-radius: 6px;
+      height: 470px;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  /* Footer styles */
+  .footer {
+    padding: 30px 0; /* Top and bottom padding */
+    height: 250px;
+    .footer-heading {
+      margin-bottom: 10px;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: bold;
+      img {
+        height: 31px;
+        width: 31px;
+      }
+    }
+    p {
+      margin: 0; /* Remove extra margins */
+      .footer-link {
+        color: $light;
+        text-decoration: none;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    a {
+      i {
+        font-size: 20px;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+    .row > div {
+      text-align: left; /* Align text to left on larger screens */
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 20px; /* Space above */
+    padding-top: 15px; /* Padding above */
+    font-size: 14px; /* Smaller text size */
+  }
+  .contactrow {
+    margin-left: 45px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .copyright {
+    font-family: $body-font-family;
+  }
+}
+/* Tablet styles */
+@include media-breakpoint-up(md) {
+  .container1 {
+    padding: 0 42px;
+  }
+  /* Homepage Top Banner styles */
+  .hero1 {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $dark;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+  }
+
+  .hero3 {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $dark;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+  }
+
+  /*cards styles*/
+  .skills-section {
+    p {
+      font-size: 20px;
+    }
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    .card {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .portfolio-section {
+    p {
+      font-size: 18px;
+      font-weight: normal;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .card {
+      margin-bottom: 2rem;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 625px;
+    }
+    h4 {
+      font-size: 30px;
+    }
+  }
+
+  .hobbies-section {
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 25px;
+    }
+    .card {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  /*section styles*/
+  .summary-section {
+    padding: 0 42px;
+    .row {
+      flex-direction: row;
+    }
+    img {
+      display: block;
+      margin: auto;
+      height: 316px;
+      width: 316px;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    .sizing {
+      display: block;
+      margin: auto;
+      height: 350px;
+      width: 350px;
+    }
+    p {
+      margin-bottom: 1rem;
+      line-height: 150%;
+      font-size: 16px;
+      padding-top: 25px;
+    }
+  }
+
+  /*time-line styles*/
+  .timeline-with-icons .timeline-item {
+    margin-bottom: 50px; // Adjust spacing for md
+  }
+
+  .timeline-with-icons .timeline-icon {
+    left: -48px; // Adjust icon positioning for md
+  }
+
+  /* Footer styles */
+
+  .footer .footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    img {
+      height: 31px;
+      width: 31px;
+    }
+  }
+  .contactrow {
+    margin-left: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+/* Desktop styles */
+@include media-breakpoint-up(lg) {
+  .container1 {
+    padding: 0 52px;
+  }
+  /* Typography styles */
+  .home-paragraph {
+    margin-top: 10px;
+  }
+
+  /* Navbar styles */
+  nav {
+    background-color: $light;
+    height: 107px;
+
+    display: flex;
+    .container-fluid {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  .navbar-brand {
+    background-color: $light;
+    img {
+      height: 89px;
+      width: 89px;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      font-family: $headings-font-family;
+      font-weight: $headings-font-weight;
+      font-size: 23px;
+      margin: 10px;
+      .nav-link {
+        color: $dark;
+        text-decoration: none;
+        padding: 0;
+        &:hover {
+          color: $p-blue-100;
+        }
+      }
+    }
+  }
+
+  /* Homepage Top Banner styles */
+  .hero1 {
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: $dark;
+    }
+
+    button {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+  }
+
+  /* otherPages Top Banner styles */
+  /* smaller Banners styles */
+
+  /*cards styles*/
+  .skills-section {
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+  }
+
+  .portfolio-section {
+    p {
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .card {
+      height: 50rem;
+    }
+  }
+
+  .hobbies-section {
+    li img {
+      height: 15px;
+      width: 15px;
+      margin-right: 5px;
+    }
+    .list-group-item {
+      font-size: 18px;
+    }
+  }
+
+  /*section styles*/
+  .summary-section {
+    padding: 0 52px;
+    .row {
+      flex-direction: row;
+    }
+
+    img {
+      display: block;
+      margin: auto;
+      height: 366px;
+      width: 366px !important;
+      box-shadow: -7px 7px 25px -1px $manatee;
+      margin-bottom: 3rem;
+    }
+    .sizing {
+      display: block;
+      margin: auto;
+      height: 400px;
+      width: 400px;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 18px;
+    }
+  }
+
+  /* Footer styles */
+  .footer {
+    position: relative;
+    background-color: #022c43; /* Dark navy background */
+    color: #ffffff; /* White text */
+    padding: 30px 0; /* Top and bottom padding */
+    height: 159px;
+    .footer-heading {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    .footer-logo {
+      font-size: 32px;
+      font-weight: bold;
+      img {
+        height: 51px;
+        width: 51px;
+      }
+    }
+
+    p {
+      margin: 0;
+      /* Remove extra margins */
+      .footer-link {
+        color: $light;
+        text-decoration: none;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    a {
+      i {
+        font-size: 21px;
+        margin-right: 5px;
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .row > div {
+      text-align: left; /* Align text to left on larger screens */
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+    margin-top: 20px; /* Space above */
+    padding-top: 15px; /* Padding above */
+    font-size: 14px; /* Smaller text size */
+  }
+  .contactrow {
+    margin-left: 0;
+  }
+
+  .copyright {
+    font-family: $body-font-family;
+  }
+}

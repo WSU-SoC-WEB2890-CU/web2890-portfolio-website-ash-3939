@@ -1,28 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio-Ashley Medell(Silva)</title>
+    <link rel="icon" type="image/x-icon" href="./images/protfolio-logo-tabico.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Portfolio website of Ashley Medell (Silva), showcasing projects, skills, and contact information."
+    />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Portfolio website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
-  <meta name="description" content="TODO: Portfolio website ...">
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./images/protfolio-logo.png"
+              alt="a blonde girl with headphones with the name Ashley Silva and text under it saying frontend magic, no wand required"
+              class="navbar-logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="portfolio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="portfolio.html">View All Projects</a></li>
+                  <li><a class="dropdown-item" href="cardeal.html">Cardeal</a></li>
+                  <li><a class="dropdown-item" href="skyline-apartments.html">Skyline Residences Apartments</a></li>
+                  <li><a class="dropdown-item" href="shop-til-you-drop.html">Shop 'Til You Drop</a></li>
+                  <li><a class="dropdown-item" href="notes-app.html">Notes App</a></li>
+                  <li><a class="dropdown-item" href="wildcat-store.html">Wildcat Store</a></li>
+                  <li><a class="dropdown-item" href="recipe-meal-prep.html">Recipe & Meal Prep Website</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero1">
+      <img src="./images/home-page/home-page-banner.jpg" class="card-img" alt="computer desk with plants and camera" />
+      <div class="card-img-overlay text-center d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12"><h1>Ashley Silva</h1></div>
+          <div class="col-12"><p>Front-end Software Engineer</p></div>
+          <div class="col-12"><button class="btn" onclick="location.href='about.html'">Read About Me</button></div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Section -->
+    <section class="skills-section text-center">
+      <p>
+        With these tools, I turn complex code into seamless experiences—where great design meets precision and a touch
+        of magic.
+      </p>
+      <div class="container1">
+        <div class="row mt-5 mb-2">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card p-3">
+              <img src="./images/code-types.png" class="card-img-top" alt="Front-end Stack" />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Front Stack
+                  <hr />
+                </h4>
 
-  <link rel="stylesheet" href="./stylesheets/main.scss">
-</head>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="fa-brands fa-html5 me-2" style="color: #f28d8d"></i> HTML</li>
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-sass me-2" style="color: #f28d8d"></i> Sass(CSS)
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-js me-2" style="color: #f28d8d"></i> JavaScript
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-<body>
-  <!-- Your HTML goes here -->
-  <h1 class="display-2 text-center my-5 py-5">
-    <span class="d-block py-5 mt-5">
-      <i class="bi bi-filetype-html text-primary"></i> / 
-      <i class="bi bi-filetype-css text-danger"></i> / 
-      <i class="bi bi-filetype-js text-success"></i>
-    </span>
-    
-    Portfolio Website
-  </h1>
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card p-3">
+              <img src="./images/design-types.png" class="card-img-top" alt="Design Tools" />
+              <div class="card-body">
+                <h4 class="card-title">
+                  Design Tools
+                  <hr />
+                </h4>
 
-  <script type="module" src="./javascripts/main.js"></script>
-</body>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    <img src="./images/icons8-adobe-50.svg" alt="It is an adobe icon" /> Adobe Suite
+                  </li>
+                  <li class="list-group-item"><i class="fa-brands fa-figma me-2" style="color: #f28d8d"></i>Figma</li>
+                  <li class="list-group-item">
+                    <i class="fa-brands fa-google me-2" style="color: #f28d8d"></i>Google Fonts
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card p-3">
+              <img src="./images/IDES-types.png" class="card-img-top" alt="IDEs" />
+              <div class="card-body">
+                <h4 class="card-title rounded">
+                  IDEs
+                  <hr />
+                </h4>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><i class="fa-solid fa-atom me-2" style="color: #f28d8d"></i>Atom</li>
+                  <li class="list-group-item"><img src="./images/pycharm.svg" alt="pycharm logo" /> PyCharm</li>
+                  <li class="list-group-item"><img src="./images/file-type-vscode.svg" alt="vscode logo" />VSCode</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--portfolio section-->
+    <section class="hero2">
+      <img
+        src="./images/home-page/home-page-portfolio-banner.jpg"
+        class="card-img"
+        alt="notebook with wire frames doodled in it"
+      />
+      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12 mb-3"><h2>Explore my recent work below or visit my portfolio for more projects.</h2></div>
+          <div class="col-12"><button class="btn" onclick="location.href='portfolio.html'">View Portfolio</button></div>
+        </div>
+      </div>
+    </section>
+    <section class="portfolio-section">
+      <div class="container1">
+        <div class="row mt-5 mb-2">
+          <!-- Card 1 -->
+          <div class="col-md-6">
+            <div class="card">
+              <img src="./images/apartment-image.jpg" class="card-img-top" alt="Front-end Stack" />
+              <div class="card-body">
+                <h4 class="card-title text-center mt-3">Skyline Residences Prototype</h4>
+                <p class="text-left mt-4">
+                  I am creating an apartment prototype website for a fictitious company called Skyline Residences. This
+                  website shows different apartments in the apartment building for rent, and much more.
+                </p>
+              </div>
+              <div class="card-body text-center">
+                <a href="skyline-apartments.html" class="card-link btn btn-primary">Project Details</a>
+                <a href="https://skylineresidences.netlify.app/" class="card-link btn btn-secondary text-white"
+                  >View Prototype</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6">
+            <div class="card">
+              <img src="./images/cardeal.jpg" class="card-img-top" alt="Design Tools" />
+              <div class="card-body">
+                <h4 class="card-title text-center mt-3">Cardeal Prototype</h4>
+
+                <p class="text-left mt-4">
+                  I am created a car buying prototype website for a fictious company called Cardeal. This website allows
+                  people to sell their car for a different car. I used blue and green color pallet to be eye catching
+                  for everyone.
+                </p>
+              </div>
+              <div class="card-body text-center">
+                <a href="cardeal.html" class="card-link btn btn-primary">Project Details</a>
+                <a href="https://dainty-torrone-c259bc.netlify.app/" class="card-link btn btn-secondary text-white"
+                  >View Prototype</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Contact section-->
+    <section class="hero2">
+      <img
+        src="./images/home-page/home-page-contact-banner.jpg"
+        class="card-img"
+        alt="notebook with wire frames doodled in it"
+      />
+      <div class="card-img-overlay d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12 mb-3"><h2>Let’s design and create something amazing together</h2></div>
+          <div class="col-12"><button class="btn" onclick="location.href='contact.html'">Contact Me</button></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer bg-primary text-light mt-auto">
+      <div class="container">
+        <div class="row text-center text-md-left align-items-center">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-3 col-4 mb-2">
+            <p class="footer-logo">
+              <img src="./images/protfolio-logo-footer.png" alt="girl with blonde hair and headphones" /> | AS
+            </p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-3 col-md-3 col-6 mb-lg-4 mb-md-4 contactrow">
+            <h6 class="footer-heading">Phone</h6>
+            <p><a class="footer-link" href="tel:+18018955668">(801)-895-5668</a></p>
+
+            <!-- Third Column as a row on mobile -->
+            <div class="d-md-none">
+              <h6 class="footer-heading">Email</h6>
+              <p><a class="footer-link" href="mailto:ashmedell@gmail.com">ashmedell@gmail.com</a></p>
+            </div>
+
+            <!-- Fourth Column as a row on mobile -->
+            <div class="d-md-none">
+              <h6 class="footer-heading">Social</h6>
+              <p>
+                <a href="https://www.facebook.com/ashley.medell.1/" class="text-light me-1"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="www.linkedin.com/in/ashley-medell-365b3b192" class="text-light"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-3 col-md-3 col-3 mb-4 d-none d-md-block">
+            <h6 class="footer-heading">Email</h6>
+            <p><a class="footer-link" href="mailto:ashmedell@gmail.com">ashmedell@gmail.com</a></p>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-3 col-md-3 col-3 mb-4 d-none d-md-block text-center">
+            <h6 class="footer-heading">Social</h6>
+            <p>
+              <a href="https://www.facebook.com/ashley.medell.1/" class="text-light me-1"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="www.linkedin.com/in/ashley-medell-365b3b192" class="text-light"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3 text-center copyright">
+        <p>&copy; 2025 Ashley Silva. All rights reserved.</p>
+      </div>
+    </footer>
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
 </html>

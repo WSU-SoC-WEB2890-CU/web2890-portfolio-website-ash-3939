@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio-Ashley Medell(Silva)</title>
+    <link rel="icon" type="image/x-icon" href="./images/protfolio-logo-tabico.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index,follow" />
+    <meta
+      name="description"
+      content="Portfolio website of Ashley Medell (Silva), showcasing projects, skills, and contact information."
+    />
+    <link rel="stylesheet" href="./stylesheets/main.scss" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="./images/protfolio-logo.png"
+              alt="a blonde girl with headphoes with the name Ashley Silva and text under it saying frontend magic, no wand required"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item dropdown active">
+                <a
+                  class="nav-link dropdown-toggle"
+                  aria-current="page"
+                  href="portfolio.html"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="portfolioDropdown"
+                >
+                  Portfolio
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="cardeal.html">Cardeal</a></li>
+                  <li><a class="dropdown-item" href="skyline-apartments.html">Skyline Residences Apartments</a></li>
+                  <li><a class="dropdown-item" href="shop-til-you-drop.html">Shop 'Til You Drop</a></li>
+                  <li><a class="dropdown-item" href="notes-app.html">Notes App</a></li>
+                  <li><a class="dropdown-item" href="wildcat-store.html">Wildcat Store</a></li>
+                  <li><a class="dropdown-item" href="recipe-meal-prep.html">Recipe & Meal Prep Website</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="hero3 mb-5">
+      <img src="./images/notes-app.jpg" class="card-img" alt="notebook on a desk with a pink sticky note" />
+      <div class="card-img-overlay text-center d-flex justify-content-center align-items-center">
+        <div class="row">
+          <div class="col-12"><h1>Notes App Website</h1></div>
+          <div class="col-12">
+            <button class="btn btn-secondary text-light fw-bold mt-3">
+              <a class="text-light" href="https://web-production-80a8.up.railway.app/">View Website</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container1 mt-5 mb-5">
+      <div class="mb-5">
+        <h2>Project Overview</h2>
+        <p>
+          The Notes+ Web Application is a full-stack project designed to help users manage and organize personal notes
+          efficiently. The application includes features such as user authentication, note creation, profile management,
+          and an optional ad-free experience through subscription plans. It prioritizes user-friendliness,
+          accessibility, and responsive design, making it suitable for a broad audience. The project integrates modern
+          frameworks and tools to deliver a secure, functional, and engaging web experience.
+        </p>
+      </div>
+      <div class="mb-5">
+        <h2>Methods</h2>
+        <p class="mb-1"><strong>The development process involved:</strong></p>
+        <ul>
+          <li>
+            <strong>Setting Up the Environment:</strong> Configured a Python virtual environment and set up Flask as the
+            micro-framework. Deployed the initial "Hello World" app using Railway.
+          </li>
+          <li>
+            <strong>Design and Backend Integration:</strong> Created a modular architecture using Flask blueprints for
+            scalable routing. Integrated SQLAlchemy ORM and PostgreSQL for robust database management. Used
+            Flask-Migrate to handle database migrations efficiently.
+          </li>
+          <li>
+            <strong>Features and Functionalities:</strong> Developed secure user authentication with email verification
+            and password hashing. Designed dynamic templates using Jinja2 for profile management and note creation.
+            Added email notifications using Google’s Gmail API for account verification and updates.
+          </li>
+          <li>
+            <strong>Responsive Design:</strong> Implemented Bootstrap and custom CSS for responsive layouts across
+            devices.
+          </li>
+        </ul>
+      </div>
+      <div class="mb-5">
+        <h2>Tools</h2>
+        <p class="mb-1"><strong>The primary tools and technologies used included:</strong></p>
+        <ul>
+          <li><strong>Languages & Frameworks:</strong> Python, Flask, HTML, CSS, and JavaScript</li>
+          <li><strong>Styling:</strong> Bootstrap, Google Fonts, and Font Awesome</li>
+          <li><strong>Database Management:</strong> SQLAlchemy & PostgreSQL</li>
+          <li><strong>APIs:</strong> Google Gmail API for email handling</li>
+          <li><strong>Utilities:</strong> Jinja2 for templating, Flask-Migrate for database migrations</li>
+          <li><strong>Development Environment:</strong> Visual Studio Code, Git/GitHub</li>
+        </ul>
+      </div>
+      <div class="mb-5">
+        <h2>Users</h2>
+        <p>
+          The target audience includes individuals looking for a simple yet effective tool to manage personal notes. The
+          app accommodates casual users, professionals, and those requiring additional features like ad-free experiences
+          through subscriptions.
+        </p>
+      </div>
+      <div class="mb-5">
+        <h2>Details and Findings</h2>
+        <p>
+          <strong>Design Decisions <br /></strong> The design emphasizes simplicity and accessibility, with intuitive
+          navigation and clean layouts. A soothing color palette and custom typography were selected to enhance
+          readability and user engagement. Dynamic templates and modular components allow for scalable and maintainable
+          code.
+        </p>
+
+        <p class="mb-1"><strong>Strongest Features</strong></p>
+        <ul>
+          <li>
+            <strong>User Authentication:</strong> Secure login, registration, and email verification to protect user
+            data.
+          </li>
+          <li>
+            <strong>Notes Management:</strong> Create, edit, and delete notes with a clean and organized interface.
+          </li>
+          <li>
+            <strong>Profile Settings:</strong> Update user information, manage subscriptions, and delete accounts.
+          </li>
+          <li><strong>Monetization:</strong> Optional payment plans to remove ads and enhance the user experience.</li>
+          <li><strong>Responsive Design:</strong> Optimized layouts for desktops, tablets, and mobile devices.</li>
+        </ul>
+      </div>
+
+      <div class="mb-5">
+        <div class="row text-center">
+          <div class="col-md-6 mb-4">
+            <img
+              src="./images/notes-app/landing-page.png"
+              alt="landing page of the notes app"
+              class="img-fluid rounded shadow-sm mb-2"
+            />
+            <p class="fw-bold">Wire-frame Landing Page</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="./images/notes-app/signup.png"
+              alt="Signup page of the notes app"
+              class="img-fluid rounded shadow-sm mb-2"
+            />
+            <p class="fw-bold">Wire-frame Signup Page</p>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-6 mb-4">
+            <img
+              src="./images/notes-app/login.png"
+              alt="Login page of the notes app"
+              class="img-fluid rounded shadow-sm mb-2"
+            />
+            <p class="fw-bold">Wire-frame Login Page</p>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="./images/notes-app/edit-add-note.png"
+              alt="Edit and Add Note page of the notes app"
+              class="img-fluid rounded shadow-sm mb-2"
+            />
+            <p class="fw-bold">Wire-frame Add/Edit notes</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <h2>Problems I Encountered and What I Learned</h2>
+        <p class="mb-1">
+          <strong>Challenges</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>Database Management:</strong> Implementing migrations and ensuring seamless interactions between
+            Flask and PostgreSQL required detailed debugging.
+          </li>
+          <li>
+            <strong>Email Integration:</strong> Setting up Gmail API for email notifications posed initial complexities.
+          </li>
+          <li>
+            <strong>Session Security:</strong> Avoiding session clashing with UUID-based unique identifiers was a new
+            concept.
+          </li>
+        </ul>
+        <p class="mb-1"><strong>Solutions and Lessons</strong></p>
+        <ul>
+          <li>Gained expertise in Flask’s blueprint architecture for scalable web applications.</li>
+          <li>Improved my understanding of database migrations and ORM principles with SQLAlchemy.</li>
+          <li>Learned the importance of user-friendly authentication flows and secure password handling.</li>
+          <li>Enhanced skills in designing responsive and accessible web interfaces using modern frameworks.</li>
+        </ul>
+        <p>
+          <strong>Takeaways <br /></strong> This project provided valuable experience in full-stack web development,
+          combining Flask for backend functionality with PostgreSQL for database management and Bootstrap for responsive
+          design. Key features included secure user authentication, email integration, and modular architecture using
+          Flask blueprints. The project also focused on creating a user-friendly, accessible interface and implementing
+          optional monetization through subscription plans. Challenges like managing database migrations, setting up
+          Gmail API for notifications, and ensuring session security were overcome, enhancing skills in debugging,
+          security, and scalable application design.
+        </p>
+        <p>
+          <strong>Results <br /></strong> This project demonstrates a deep understanding of full-stack web development,
+          integrating front-end design, back-end functionality, and robust database management into a cohesive and
+          scalable application.
+        </p>
+      </div>
+    </section>
+    <footer class="footer bg-primary text-light mt-auto">
+      <div class="container">
+        <div class="row text-center text-md-left align-items-center">
+          <!-- First Column -->
+          <div class="col-lg-3 col-md-3 col-4 mb-2">
+            <p class="footer-logo">
+              <img src="./images/protfolio-logo-footer.png" alt="girl with blonde hair and headphones" /> | AS
+            </p>
+          </div>
+
+          <!-- Second Column -->
+          <div class="col-lg-3 col-md-3 col-6 mb-lg-4 mb-md-4 contactrow">
+            <h6 class="footer-heading">Phone</h6>
+            <p><a class="footer-link" href="tel:+18018955668">(801)-895-5668</a></p>
+
+            <!-- Third Column as a row on mobile -->
+            <div class="d-md-none">
+              <h6 class="footer-heading">Email</h6>
+              <p><a class="footer-link" href="mailto:ashmedell@gmail.com">ashmedell@gmail.com</a></p>
+            </div>
+
+            <!-- Fourth Column as a row on mobile -->
+            <div class="d-md-none">
+              <h6 class="footer-heading">Social</h6>
+              <p>
+                <a href="https://www.facebook.com/ashley.medell.1/" class="text-light me-1"
+                  ><i class="bi bi-facebook"></i
+                ></a>
+                <a href="www.linkedin.com/in/ashley-medell-365b3b192" class="text-light"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-lg-3 col-md-3 col-3 mb-4 d-none d-md-block">
+            <h6 class="footer-heading">Email</h6>
+            <p><a class="footer-link" href="mailto:ashmedell@gmail.com">ashmedell@gmail.com</a></p>
+          </div>
+
+          <!-- Fourth Column -->
+          <div class="col-lg-3 col-md-3 col-3 mb-4 d-none d-md-block text-center">
+            <h6 class="footer-heading">Social</h6>
+            <p>
+              <a href="https://www.facebook.com/ashley.medell.1/" class="text-light me-1"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="www.linkedin.com/in/ashley-medell-365b3b192" class="text-light"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-3 text-center copyright">
+        <p>&copy; 2025 Ashley Silva. All rights reserved.</p>
+      </div>
+    </footer>
+    <script type="module" src="./javascripts/main.js"></script>
+  </body>
+</html>
